@@ -17,7 +17,7 @@ public class MoviesController : ControllerBase
     [HttpGet]
     public IActionResult GetMovies()
     {
-        // This is where you would normally get the movies from the database
+        _logger.LogInformation("Fetching movies from the database.");
         var movies = new List<Movie>
         {
             new Movie { Id = 1, Title = "Inception", Genre = "Sci-Fi", ReleaseDate = new DateTime(2010, 7, 16) },
